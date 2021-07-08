@@ -1,4 +1,4 @@
-# [difftastic](https://github.com/wilfed/difftastic) in a snap #
+# [difftastic](https://github.com/wilfred/difftastic) in a snap #
 
 -------------------------------------------------------------------------------
 
