@@ -1,6 +1,6 @@
 name: difftastic
 base: core20
-adopt-info: difftastic
+version: 0.10.1
 summary: Structured diff tool that compares files based on their syntax
 description: |
   Difftastic is an experimental structured diff tool that compares files based
@@ -20,9 +20,6 @@ apps:
 
 parts:
   difftastic:
-    # See 'snapcraft plugins'
     plugin: rust
     source: https://github.com/wilfred/difftastic.git
-    override-build: |
-      snapcraftctl build
-      snapcraftctl set-version "$(git describe --tags)"
+    source-tag: $SNAPCRAFT_PROJECT_VERSION
