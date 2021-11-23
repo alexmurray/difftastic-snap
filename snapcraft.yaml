@@ -14,7 +14,7 @@ confinement: strict
 
 apps:
   difftastic:
-    command: bin/difftastic
+    command: bin/difft
     plugs:
       - home
 
