@@ -3,11 +3,15 @@ base: core20
 version: 0.25.0
 summary: Structured diff tool that compares files based on their syntax
 description: |
-  Difftastic is an experimental structured diff tool that compares files based
-  on their syntax. It is very much unfinished. It works reasonably on very
-  parenthesised data (lisps, JSON), it works sometimes on other languages with
-  sufficient parentheses (Rust, JS), and falls back to a line-oriented diff
-  otherwise.
+  Difftastic is an experimental structured diff tool that compares files
+  based on their syntax.
+
+  Difftastic supports over 20 programming languages.  If a file has an
+  unrecognised extension, difftastic uses a textual diff with word
+  highlighting.
+
+  Difftastic output is intended for human consumption, and it does not
+  generate patches that you can apply later. Use diff if you need a patch.
 
 grade: devel
 confinement: strict
