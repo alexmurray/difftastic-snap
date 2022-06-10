@@ -13,7 +13,7 @@ description: |
   Difftastic output is intended for human consumption, and it does not
   generate patches that you can apply later. Use diff if you need a patch.
 
-grade: devel
+grade: stable
 confinement: strict
 
 apps:
