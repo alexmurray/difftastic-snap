@@ -6,7 +6,7 @@ description: |
   Difftastic is an experimental structured diff tool that compares files
   based on their syntax.
 
-  Difftastic supports over 20 programming languages.  If a file has an
+  Difftastic supports over 30 programming languages.  If a file has an
   unrecognised extension, difftastic uses a textual diff with word
   highlighting.
 
