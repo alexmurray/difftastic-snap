@@ -3,8 +3,8 @@ base: core20
 version: 0.47.0
 summary: Structured diff tool that compares files based on their syntax
 description: |
-  Difftastic is an experimental structured diff tool that compares files
-  based on their syntax.
+  Difftastic is a structural diff tool that compares files based on their
+  syntax.
 
   Difftastic supports over 30 programming languages.  If a file has an
   unrecognised extension, difftastic uses a textual diff with word
@@ -12,6 +12,11 @@ description: |
 
   Difftastic output is intended for human consumption, and it does not
   generate patches that you can apply later. Use diff if you need a patch.
+
+  To use the difftastic snap as an external diff tool with git, it should be
+  invoked as:
+
+      TMPDIR=~/tmp GIT_EXTERNAL_DIFF="difftastic" git diff
 
 grade: stable
 confinement: strict
