@@ -1,6 +1,6 @@
 name: difftastic
 base: core20
-version: 0.56.1
+version: 0.57.0
 summary: Structured diff tool that compares files based on their syntax
 description: |
   Difftastic is a structural diff tool that compares files based on their
