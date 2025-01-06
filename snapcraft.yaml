@@ -1,5 +1,5 @@
 name: difftastic
-base: core20
+base: core24
 version: 0.62.0
 summary: Structured diff tool that compares files based on their syntax
 description: |
