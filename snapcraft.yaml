@@ -31,4 +31,4 @@ parts:
   difftastic:
     plugin: rust
     source: https://github.com/wilfred/difftastic.git
-    source-tag: $SNAPCRAFT_PROJECT_VERSION
+    source-tag: $CRAFT_PROJECT_VERSION
