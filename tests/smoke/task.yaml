@@ -1,0 +1,15 @@
+summary: basic smoke test
+
+prepare: |
+  # run in $HOME to ensure difftastic snap has access to the repo etc
+  cd $HOME
+  git clone https://github.com/Wilfred/difftastic
+  mkdir -p ~/tmp
+
+restore: |
+  cd $HOME
+  rm -rf difftastic
+
+execute: |
+  cd $HOME/difftastic
+  TMPDIR=~/tmp GIT_EXTERNAL_DIFF="difftastic" git diff HEAD~1

@@ -1,0 +1,51 @@
+project: difftastic-snap
+
+backends:
+  qemu:
+    systems:
+      # build via autopkgtest-buildvm-ubuntu-cloud and mv to ~/.spread/qemu/
+      - ubuntu-24.04-64:
+          username: ubuntu
+          password: ubuntu
+
+path: /spread/difftastic-snap
+
+exclude:
+  - .git
+  - .github
+  - difftastic*.snap
+
+environment:
+  CHANNEL/latest_stable: latest/stable
+  CHANNEL/latest_candidate: latest/candidate
+  CHANNEL/latest_beta: latest/beta
+  CHANNEL/latest_edge: latest/edge
+  SNAP: difftastic
+
+suites:
+  tests/:
+    summary: spread tests
+    prepare: |
+      # ensure machine is up to date
+      export DEBIAN_FRONTEND=noninteractive
+      # use apt-get to support older Ubuntu releases
+      apt-get update
+      apt-get -o Dpkg::Options::="--force-confold" -o Dpkg::Options::="--force-confdef" upgrade -y
+      # use apt-get to support older Ubuntu releases
+      apt-get autoremove --purge -y
+      apt install -y snapd git
+
+      # configure git
+      git config --global user.email "you@example.com"
+      git config --global user.name "You"
+
+    prepare-each: |
+      snap install difftastic --channel $CHANNEL
+
+    restore-each: |
+      snap remove difftastic
+      rm -rf snap/difftastic
+
+
+
+
