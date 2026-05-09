@@ -17,6 +17,11 @@ description: |
   invoked as:
 
       TMPDIR=~/tmp GIT_EXTERNAL_DIFF="difftastic" git diff
+website: https://difftastic.wilfred.me.uk/
+issues: https://github.com/alexmurray/difftastic-snap/issues
+contact: https://github.com/alexmurray/difftastic-snap/issues
+license: MIT
+
 
 grade: stable
 confinement: strict
